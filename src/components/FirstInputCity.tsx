@@ -1,15 +1,14 @@
-import React, {useState} from 'react';
-import {weatherAPI} from "../services/WeatherService";
-import {Navigate, useNavigate} from "react-router-dom";
+import React from 'react';
+import {useNavigate} from "react-router-dom";
 
-const FirstInputCity = ({city, setCity, setQueryCity, queryCity}: any) => {
+const FirstInputCity = ({city, setCity, setQueryCity}: any) => {
 
     const navigate = useNavigate();
     const enterHandler = (e: any) => {
-        if (e.key === 'Enter' && city.trim()) {
+        if (e.key === 'Enter') {
             setQueryCity(city);
+            navigate(`/current/${city}`, {state: {queryCity: city}});
             setCity('');
-            navigate(`/current/${city}`, queryCity);
         }
     }
     return (

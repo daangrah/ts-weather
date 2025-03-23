@@ -9,6 +9,7 @@ export interface IWeather {
             text: string;
             icon: string;
             wind_kph: number;
+            humidity: number;
         };
     };
 }

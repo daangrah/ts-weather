@@ -1,4 +1,4 @@
-import {BaseQueryArg, createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 import {IWeather} from "../models/IWeather";
 const key = "dfb696639fae4ab8a3c131424252203";
 
